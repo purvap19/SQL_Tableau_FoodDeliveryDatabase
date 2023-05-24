@@ -149,6 +149,9 @@ INSERT INTO customers(first_name,last_name, city_id, email, phone_number, joined
  ('Max','Harrison',39,'max.harry653@yahoo.com',463579802,'2019-05-29 19:21:53'),
  ('James','McKinley',11,'mckinley.james930@gmail.com',335135034,'2021-10-12 12:26:43'),
  ('Michelle','Larry',25,'michelle101@gmail.com',281531408,'2020-03-29 18:23:32');
+<<<<<<< HEAD
   
+=======
+>>>>>>> refs/remotes/origin/main
 
 
