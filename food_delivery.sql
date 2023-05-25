@@ -296,10 +296,10 @@ DROP COLUMN order_status;
 ALTER TABLE delivery_orders MODIFY predicted_time TIME;
 ALTER TABLE delivery_orders MODIFY actual_time TIME;
 
+/*Inserting data into delivery_orders table */
 INSERT INTO delivery_orders (order_time,customer_id,restaurant_id,total_price,discount,predicted_time,actual_time)
 VALUES 
 ('2020-06-12 12:04:32',1,31,25.80,0.00,'12:25:00','12:23:00');
-
 INSERT INTO delivery_orders (order_time,customer_id,restaurant_id,total_price,discount,predicted_time,actual_time)
 VALUES 
 ('2020-06-18 20:20:19',2,68,35.75,5.00,'20:55:00','20:53:00'),
@@ -352,3 +352,18 @@ VALUES
 ('2019-09-11 12:15:54',43,114,25.41,0.00,'12:45:00','12:46:00'),
 ('2021-10-19 14:36:35',44,52,35.75,0.00,'15:25:00','15:23:00'),
 ('2020-04-01 22:17:43',45,89,25.74,0.00,'22:57:00','22:55:00');
+------------------------------------------------------------------------------
+/* 1. Query first 10 customers in alphabetical order */
+SELECT first_name, last_name FROM CUSTOMERS
+ORDER BY first_name ASC
+LIMIT 10;
+
+/* 2. Query total  number of customers */
+SELECT COUNT(id) FROM customers;
+
+/* 3. Query total number of inactive users*/
+SELECT COUNT(customers.id) FROM customers
+LEFT JOIN delivery_orders ON customers.id = delivery_orders.customer_id
+WHERE customer_id IS NULL;
+
+/* 4. Query total number of orders for each customer */
