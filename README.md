@@ -12,6 +12,6 @@
   <li> Query total number of inactive users </li>
   <li> Query total number of orders for each customer </li>
   <li> Determine the most popular restaurant for delivery orders </li>
-  <li> Determine what restaurants are popular in what state </li> 
+  <li> Determine what restaurants are popular in what city </li> 
   </ul>
   
