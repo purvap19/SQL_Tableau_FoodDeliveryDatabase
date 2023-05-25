@@ -7,9 +7,8 @@
 
 <strong> The following questions would be answered using the database </strong>
 <ul> 
-  <li> Query first 10 customers </li>
+  <li> Query first 10 customers in alphabetical order </li>
   <li> Query total number of customers </li>
-  <li> Query total number of orders each day </li>
   <li> Query total number of inactive users </li>
   <li> Query total number of orders for each customer </li>
   <li> Determine the most popular restaurant for delivery orders </li>
