@@ -367,3 +367,32 @@ LEFT JOIN delivery_orders ON customers.id = delivery_orders.customer_id
 WHERE customer_id IS NULL;
 
 /* 4. Query total number of orders for each customer */
+SELECT  customers.first_name,customers.last_name, COUNT(*) AS number_of_orders
+FROM customers 
+INNER JOIN delivery_orders
+ON customers.id = delivery_orders.customer_id
+GROUP BY customers.first_name,customers.last_name
+HAVING COUNT(*) > 0;
+
+/*5. Determine the most popular restaurant for delivery orders */
+SELECT restaurants.name, COUNT(*) AS popular_restaurant
+FROM restaurants
+INNER JOIN delivery_orders 
+ON restaurants.restaurant_id = delivery_orders.restaurant_id
+GROUP BY restaurants.name
+HAVING COUNT(*) > 0
+ORDER BY popular_restaurant DESC
+LIMIT 1;
+
+/* 6. Determine what restaurants are popular in what city */
+SELECT DISTINCT city.name, restaurants.name
+FROM restaurants
+INNER JOIN city
+ON restaurants.city_id = city.id
+INNER JOIN delivery_orders
+ON delivery_orders.restaurant_id = restaurants.restaurant_id
+GROUP BY  city.name,restaurants.name
+ORDER BY city.name;
+
+
+
