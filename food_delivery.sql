@@ -383,16 +383,3 @@ GROUP BY restaurants.name
 HAVING COUNT(*) > 0
 ORDER BY popular_restaurant DESC
 LIMIT 1;
-
-/* 6. Determine what restaurants are popular in what city */
-SELECT DISTINCT city.name, restaurants.name
-FROM restaurants
-INNER JOIN city
-ON restaurants.city_id = city.id
-INNER JOIN delivery_orders
-ON delivery_orders.restaurant_id = restaurants.restaurant_id
-GROUP BY  city.name,restaurants.name
-ORDER BY city.name;
-
-
-
