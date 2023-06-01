@@ -387,4 +387,9 @@ HAVING COUNT(*) > 0
 ORDER BY popular_restaurant DESC
 LIMIT 1;
 
+/* 6. Percent of users who have never ordered */ 
+SELECT (FORMAT((SELECT  count(id)
+FROM customers
+WHERE id NOT IN (select customer_id FROM delivery_orders))/(count(id)) * 100,2)) AS 'Percent of users who never ordered'
+FROM customers;
 
