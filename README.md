@@ -15,5 +15,9 @@
   <li> Percent of users who have never ordered </li> 
   </ul>
   
-  ![Food Delivery Database Dashboard](Dashboard1.png)
+<h3> Dashboard </h3>
+<p> <strong> <i> <a href="https://public.tableau.com/views/fooddatabase/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link">View interactive dashboard on Tableau </a></i> </strong>
+  
+![Food Delivery Database Dashboard](Dashboard 1.png)
+  
   
