@@ -15,3 +15,5 @@
   <li> Percent of users who have never ordered </li> 
   </ul>
   
+  ![Food Delivery Database Dashboard](Dashboard1.png)
+  
